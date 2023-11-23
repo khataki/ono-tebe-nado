@@ -1,29 +1,26 @@
 /* Комментарий для коммита */
-body {
-    width: 1440px;
-}
-
 .header__links {
-    display: grid;
+    display: flex;
     box-sizing: border-box;
-    width: 1340px;
-    height: 109px;
+    width: 1440px;
     color: #000;
-    font-family: Raleway;
+    font-family: Raleway, Arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin: 92px 49px 92px 51px;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    align-content: center;
+    margin: 94px 52px 98px 19px;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 80px;
 }
-
+.header__links-lots, .header__links-about {
+    text-decoration: underline;
+}
 .header__links-list {
+    display: flex;
     list-style: circle;
     gap: 32px;
-    ;
     align-content: center;
 }
 
@@ -32,38 +29,29 @@ body {
     align-content: center;
 }
 
-ul {
-    display: grid;
-    white-space: nowrap;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    align-content: center;
-}
 
 .address {
-    display: grid;
-    font-family: Raleway;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: Raleway, Arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 13px;
-    grid-column: 8 / 11;
-    align-self: center;
-    justify-content: end;
 }
 
 .logo__heading {
-    width: 148px;
-    height: 105px;
-    display: grid;
-    grid-column: 4 / 5;
+    width: 140px;
+    height: 100px;
     align-content: center;
-    position: relative;
-    right: 30px;
+    margin-left: 209px;
+    margin-right: 355px;
 }
 
 .big__letters {
     color: #fff;
-    font-family: Raleway;
+    font-family: Raleway, Arial, sans-serif;
     font-size: 100px;
     font-style: normal;
     font-weight: 700;
@@ -72,58 +60,66 @@ ul {
     /* 115px */
     letter-spacing: 30px;
     text-transform: uppercase;
-    display: block;
-    text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .intro_big_picture {
+    background-position: center;
     position: relative;
     width: 100%;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(../images/cover.jpg);
-}
-
-.intro__cover {
     margin-bottom: 180px;
     padding: 0;
     width: 1440px;
+    z-index: 0;
     height: 757px;
-    z-index: -1;
 }
 
-.first_word {
-    height: 100px;
+.intro__big_letters-first {
     display: flex;
+    width: 1340px;
     align-items: start;
-    position: relative;
-    right: 100px;
+    z-index: 1;
+    margin-bottom: 12px;
 }
 
-.second_word {
-    height: 100px;
+.intro__big_letters-second {
     display: flex;
-    align-self: center;
+    width: 1340px;
+    justify-content: center;
+    z-index: 1;
+    padding-right: 30px;
+    margin-bottom: 5px;
 }
 
-.third_word {
-    height: 100px;
+.intro__big_letters-third {
     display: flex;
-    align-self: end;
-    position: relative;
-    left: 102px;
+    width: 1340px;
+    justify-content: end;
+    z-index: 1;
+    margin-left: 30px;
 }
 
 .intro__text {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 357px;
 }
 
 .big__letters-gap {
     letter-spacing: 60px;
+}
+
+.overlay__cards {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
 }
 
 .overlay {
@@ -131,28 +127,30 @@ ul {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: -1;
+    z-index: 0;
 }
 
-.intro__low-section {
+.intro__lower-section {
+    display: flex;
     color: #FFF;
     text-align: center;
-    font-family: Raleway;
-    font-size: 22px;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 23px;
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
     /* 127.273% */
     text-transform: uppercase;
+    justify-content: center;
+    margin-left: 365px;
+    margin-bottom: 7px;
+    align-items: center;
 }
 
 .intro__container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     color: #FFF;
-    font-family: Raleway;
+    font-family: Raleway, Arial, sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -162,31 +160,32 @@ ul {
     height: 100%;
     padding-left: 50px;
     padding-right: 50px;
-    padding-top: 85px;
+    padding-top: 167px;
     flex-wrap: wrap;
 }
 
 .intro__lower-text {
-    position: relative;
-    left: 150px;
     text-align: center;
-    /* Центрируем текст по центру */
     margin-right: 78px;
     word-spacing: 15px;
+    z-index: 1;
 }
 
 .intro__button {
-    position: relative;
-    left: 225px;
-    margin-right: 82px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 22px;
+    background-color: transparent;
     border: 1px solid #FFF;
     padding: 12px 32px;
+    z-index: 1;
 }
 
 .main__text-big {
     margin-left: 40px;
     color: #000;
-    font-family: Raleway;
+    font-family: Raleway, Arial, sans-serif;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
@@ -205,42 +204,53 @@ ul {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
+    gap: 20px;
+    /* Отступ между карточками */
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Цвет затенения */
+    z-index: 1;
+    /* Устанавливаем z-index выше, чтобы затенение было над изображением */
+    top: 0;
+    left: 0;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 0;
+    flex-grow: 1;
+    flex-basis: calc(33.33% - 20px);
     min-height: 450px;
-    flex: 1 1;
     background-color: #f0f0f0;
-    padding-top: 50px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 50px;
-    position: relative;
-    overflow: hidden;
+    padding: 50px 40px 50px 40px;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 
-    z-index: 1;
+
+@media (max-width: 960px) {
+    .card:nth-child(3) {
+        flex-basis: 100%;
+        /* Переносим третий элемент на новую строку, занимая всю ширину */
+    }
 }
 
 .card__title {
     position: relative;
     z-index: 2;
     color: #FFF;
-    font-family: Raleway;
+    font-family: Raleway, Arial, sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
@@ -252,7 +262,7 @@ ul {
 .card__description {
     position: relative;
     color: #FFF;
-    font-family: Raleway;
+    font-family: Raleway, Arial, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -263,28 +273,28 @@ ul {
 }
 
 .card__cinema {
+    position: relative;
+    z-index: 0;
     background-image: url(../images/card-lot-01.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .card__book {
+    position: relative;
+    z-index: 0;
     background-image: url(../images/card-lot-02.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .card__paint {
+    position: relative;
+    z-index: 0;
     background-image: url(../images/card-lot-03.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .card__find-more {
     margin-top: 30px;
     margin-left: 40px;
     color: #000;
-    font-family: Raleway;
+    font-family: Raleway, Arial, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -300,7 +310,8 @@ ul {
 
 .about__figure {
     position: relative;
-    left: 30px;
+    top: 1px;
+    left: 50px;
     min-width: 240px;
     max-height: 240px;
     background: #000;
@@ -312,14 +323,28 @@ ul {
 }
 
 .about__figure img {
-    max-width: 148px;
-    max-height: 114px;
+    max-width: 150px;
+    max-height: 115px;
     display: block;
 }
 
-.about__text-title {
+.about__text {
     position: relative;
-    left: 20px;
+    top: 3px;
+    left: 75px;
+    color: #000;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: none;
+    margin-left: 95px;
+    margin-top: 100px;
+    margin-bottom: 130px;
+}
+
+.about__text-title {
     color: #000;
     font-family: Raleway;
     font-size: 40px;
@@ -327,8 +352,6 @@ ul {
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-    margin-left: 95px;
-    margin-top: 100px;
     margin-bottom: 100px;
 }
 
@@ -340,21 +363,16 @@ ul {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 100px;
-    gap: 25px;
-    text-transform: none;
+    margin-bottom: 25px;
 }
 
 .about__text-description_second {
-    display: flex;
     color: #000;
     font-family: Raleway;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 25px;
-    text-transform: none;
 }
 
 .footer__container {
@@ -362,10 +380,8 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 180px 50px 90px 50px;
+    margin: 55px 50px 90px 50px;
     align-items: flex-start;
-    /* Выравнивание элементов по левому
-     краю */
     padding-right: 50px;
 
 }
@@ -380,31 +396,48 @@ ul {
     /* Выравнивание по центру */
     margin-bottom: 20px;
     /* Отступ снизу */
+    margin-right: 80px;
 }
 
 .footer__social-media {
     display: flex;
     width: 50px;
     gap: 50px;
-    /* Уменьшим отступ между иконками */
     align-self: flex-start;
-    /* Поместим иконки вправо */
     box-sizing: border-box;
     justify-content: center;
     margin-right: 55px;
+    position: relative;
+    left: 10px;
+    /* Ну я реально не знаю как его сделать чтобы 1в1 как на макете иначе не получается */
 }
+.footer__links_lots, .footer__links_about, .footer__links-main{
+    text-decoration: underline;
 
+}
 .footer_address {
-    color: #000;
-    display: block;
-    font-family: Raleway;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    font-family: Raleway, Arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24.3px;
-    /* 135% */
+    line-height: 13px;
 }
 
 .footer__navigation {
+    color: #000;
+    text-align: center;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     display: flex;
-}/* место для вашего кода */
+}
+.social_media-image {
+    height: 48px;
+    width: 48px;
+}
+/* место для вашего кода */
