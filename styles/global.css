@@ -41,6 +41,12 @@ img {
   width: 148px;
   height: 105px;
 }
-a, u {
+
+a,
+u {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
