@@ -19,6 +19,7 @@
 .header__links-lots,
 .header__links-about {
     text-decoration: underline;
+    list-style: circle;
 }
 
 .header__links-list {
@@ -216,8 +217,8 @@
     justify-content: space-between;
     margin: 0;
     flex-grow: 1;
-    white-space: wrap;
-    max-width: calc(33.33% - 20px); /* Чтобы карточек было 3*/
+    max-width: calc(33.33% - 20px);
+    /* Чтобы карточек было 3*/
     background-color: #f0f0f0;
     box-sizing: border-box;
     background-position: center;
@@ -225,6 +226,7 @@
     background-size: cover;
     overflow: hidden;
 }
+
 .card__title {
     padding-top: 50px;
     padding-right: 40px;
@@ -262,7 +264,7 @@
     /* max-width: calc(50% - 10px);*/
     background-image: url(../images/card-lot-01.jpg);
 }
-  
+
 .card__book {
     flex-grow: 1;
     /*max-width: calc(50% - 10px);*/
@@ -274,6 +276,7 @@
     flex-grow: 1;
     background-image: url(../images/card-lot-03.jpg);
 }
+
 /* на этом моменте я определенно сдаюсь, вся эта шляпа меняется только вручную если раскомментировать :_( */
 
 .card__find-more {
@@ -389,7 +392,7 @@
     box-sizing: border-box;
     justify-content: center;
     margin-right: 55px;
-    
+
 }
 
 .footer__links_lots,
