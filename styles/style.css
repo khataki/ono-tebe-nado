@@ -80,28 +80,25 @@
     padding-bottom: 50px;
 }
 
-.intro__big_letters-first {
-    display: flex;
-    width: 1340px;
-    align-items: start;
-    z-index: 1;
-    margin-bottom: 12px;
-}
-
-.intro__big_letters-second {
+.intro__big_letters {
     display: flex;
     width: 1340px;
     justify-content: center;
     z-index: 1;
+}
+.first {
+    justify-content: start;
+    margin-bottom: 12px;
+}
+
+.second {
+    justify-content: center;
     padding-right: 30px;
     margin-bottom: 5px;
 }
 
-.intro__big_letters-third {
-    display: flex;
-    width: 1340px;
+.third {
     justify-content: end;
-    z-index: 1;
     margin-left: 30px;
     margin-bottom: 125px;
 }
@@ -139,6 +136,7 @@
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
+    margin-left: 28px;
 }
 
 .intro__container {
@@ -203,30 +201,32 @@
 
 .card-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px;
     /* Отступ между карточками */
     justify-content: space-between;
 }
 
 .card {
+    height: 100%;
+    overflow: hidden;
     position: relative;
-    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: 0;
-    flex-grow: 1;
-    max-width: calc(33.33% - 20px);
-    /* Чтобы карточек было 3*/
     background-color: #f0f0f0;
     box-sizing: border-box;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
 }
 
+.card_flexability {
+    flex-basis: 450px;
+    min-height: 450px;
+    min-width: 430px;
+    flex-grow: 1;
+    /* Вы чудо а не ревьюер, но у меня это все почему-то отказывается работать на Я.Браузере, 
+    ответа в чате от коллег и наставников я не получил и даже ЧатЖПТ бессилен, по идее все правильно */
+}
 .card__title {
     padding-top: 50px;
     padding-right: 40px;
@@ -241,9 +241,11 @@
     line-height: 120%;
     text-decoration-line: underline;
     text-transform: uppercase;
+    white-space: wrap;
 }
 
 .card__description {
+    white-space: wrap;
     padding-bottom: 50px;
     padding-right: 40px;
     padding-left: 40px;
@@ -254,30 +256,29 @@
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
-    /* 24px */
     z-index: 2;
     text-align: start;
 }
 
+.card__cinema,
+.card__book,
+.card__paint {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .card__cinema {
-    flex-grow: 1;
-    /* max-width: calc(50% - 10px);*/
     background-image: url(../images/card-lot-01.jpg);
 }
 
 .card__book {
-    flex-grow: 1;
-    /*max-width: calc(50% - 10px);*/
     background-image: url(../images/card-lot-02.jpg);
 }
 
-.card__paint {
-    /*max-width: 100%; */
-    flex-grow: 1;
+.card__paint {   
     background-image: url(../images/card-lot-03.jpg);
 }
-
-/* на этом моменте я определенно сдаюсь, вся эта шляпа меняется только вручную если раскомментировать :_( */
 
 .card__find-more {
     margin-top: 30px;
@@ -294,7 +295,8 @@
 .about__container {
     display: flex;
     margin-top: 181px;
-    padding-right: 100px;
+    padding-right: 50px;
+    margin-bottom: 50px;
 }
 
 .about__figure {
@@ -367,10 +369,9 @@
     grid-template-columns: repeat(3, 1fr);
     flex-direction: row;
     justify-content: space-between;
-    margin: 55px 50px 90px 50px;
     align-items: flex-start;
-    padding-right: 50px;
-
+    padding-top: 52px;
+    padding-left: 48px
 }
 
 .footer__links-list {
@@ -391,7 +392,7 @@
     align-self: flex-start;
     box-sizing: border-box;
     justify-content: center;
-    margin-right: 55px;
+    margin-right: 50px;
 
 }
 
@@ -422,6 +423,7 @@
     font-weight: 400;
     line-height: normal;
     display: flex;
+    padding-left: 48px;
 }
 
 .social_media-image {
