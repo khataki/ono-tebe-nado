@@ -9,10 +9,9 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin: 94px 52px 98px 19px;
+    margin: 94px 0 98px 0;
     align-items: center;
     padding-left: 30px;
-    padding-right: 80px;
     justify-content: space-between;
 }
 
@@ -23,6 +22,7 @@
 }
 
 .header__links-list {
+    padding-left: 23px;
     display: flex;
     list-style: circle;
     gap: 32px;
@@ -44,6 +44,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 13px;
+    padding-right: 50px;
 }
 
 .logo__heading {
@@ -200,16 +201,14 @@
 }
 
 .card-container {
+    flex-wrap: wrap;
     display: flex;
-    flex-wrap: nowrap;
     gap: 20px;
-    /* Отступ между карточками */
     justify-content: space-between;
 }
 
 .card {
     height: 100%;
-    overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -217,15 +216,15 @@
     margin: 0;
     background-color: #f0f0f0;
     box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .card_flexability {
-    flex-basis: 450px;
     min-height: 450px;
-    min-width: 430px;
+    width: 430px;
     flex-grow: 1;
-    /* Вы чудо а не ревьюер, но у меня это все почему-то отказывается работать на Я.Браузере, 
-    ответа в чате от коллег и наставников я не получил и даже ЧатЖПТ бессилен, по идее все правильно */
 }
 .card__title {
     padding-top: 50px;
@@ -259,15 +258,6 @@
     z-index: 2;
     text-align: start;
 }
-
-.card__cinema,
-.card__book,
-.card__paint {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .card__cinema {
     background-image: url(../images/card-lot-01.jpg);
 }
